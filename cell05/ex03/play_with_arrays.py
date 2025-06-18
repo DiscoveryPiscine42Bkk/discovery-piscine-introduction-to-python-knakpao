@@ -1,9 +1,5 @@
-original = [2, 8, 9, 48, 8, 22, -12, 2]
-output = []
-seen = set()
-
-for num in original:
-    if num > 5 and num not in seen:
-        output.append(num + 16)
-        seen.add(num)
-print(output)
+array = [2, 8, 9, 48, 8, 22, -12, 2]
+print(array)
+transformed = {x + 2 for x in set(array)}
+filtered = {x for x in transformed if x > 9}
+print(filtered)
